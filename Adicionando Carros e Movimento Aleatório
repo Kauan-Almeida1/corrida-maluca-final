@@ -1,0 +1,29 @@
+# Adicione logo após a Etapa 1
+ferrari_vermelha = pygame.image.load("assets/carro1.png")
+lamborghini_amarela = pygame.image.load("assets/carro2.png")
+porsche_azul = pygame.image.load("assets/carro3.png")
+
+movXFerrari = 0
+movXLamborghini = 0
+movXPorsche = 0
+posYFerrari = 30
+posYLamborghini = 190
+posYPorsche = 110
+
+while True:
+    # Eventos e preenchimento da tela
+    tela.fill(branco)
+    tela.blit(fundo, (0, 0))
+
+    # Desenha os carros na tela
+    tela.blit(ferrari_vermelha, (movXFerrari, posYFerrari))
+    tela.blit(lamborghini_amarela, (movXLamborghini, posYLamborghini))
+    tela.blit(porsche_azul, (movXPorsche, posYPorsche))
+
+    # Movimento aleatório dos carros
+    movXFerrari += random.randint(0, 10)
+    movXLamborghini += random.randint(0, 10)
+    movXPorsche += random.randint(0, 10)
+
+    pygame.display.update()
+    clock.tick(60)
