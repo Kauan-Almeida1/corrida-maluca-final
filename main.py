@@ -9,24 +9,24 @@ pygame.display.set_caption("Corrida Maluca")
 
 branco = (255, 255, 255)
 preto = (0, 0, 0)
-backgroundFinal = ("assets/backgrouond_final.jpg")
+backgroundFinal = ("backgrouond_final.jpg")
 
-fundo = pygame.image.load("assets/fundo.png")
+fundo = pygame.image.load("recursos/fundo.png")
 fundo = pygame.transform.scale(fundo, tamanho)
-fundo_final = pygame.image.load("assets/background_final.jpg")
+fundo_final = pygame.image.load("recursos/background_final.jpg")
 fundo_final = pygame.transform.scale(fundo_final, tamanho)
-ferrari_vermelha = pygame.image.load("assets/carro1.png")
-lamborghini_amarela = pygame.image.load("assets/carro2.png")
-porsche_azul = pygame.image.load("assets/carro3.png")
+ferrari_vermelha = pygame.image.load("recursos/carro1.png")
+lamborghini_amarela = pygame.image.load("recursos/carro2.png")
+porsche_azul = pygame.image.load("recursos/carro3.png")
 
-pygame.mixer.music.load("assets/trilha.mp3")
+pygame.mixer.music.load("recursos/trilha.mp3")
 pygame.mixer.music.play(-1)
-vitoria = pygame.mixer.Sound("assets/vitoria.mp3")
+vitoria = pygame.mixer.Sound("recursos/vitoria.mp3")
 vitoria.set_volume(0.5)
 
-movXFerrari = -30
-movXLamborghini = -30
-movXPorsche = -30
+movXFerrari = 0
+movXLamborghini = 0
+movXPorsche = 0
 posYFerrari = 30
 posYLamborghini = 190
 posYPorsche = 110
@@ -70,17 +70,17 @@ while True:
             somDaVitoria = True
 
     if movXFerrari >= 1000 and not ferrari_na_pista_inferior:
-        movXFerrari = -30
+        movXFerrari = 0
         posYFerrari = 350
         ferrari_na_pista_inferior = True
 
     if movXLamborghini >= 1000 and not lamborghini_na_pista_inferior:
-        movXLamborghini = -30
+        movXLamborghini = 0
         posYLamborghini = 480
         lamborghini_na_pista_inferior = True
 
     if movXPorsche >= 1000 and not porsche_na_pista_inferior:
-        movXPorsche = -30
+        movXPorsche = 0
         posYPorsche = 420
         porsche_na_pista_inferior = True
 
