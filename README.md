@@ -7,3 +7,6 @@ Movimento e Randomização: Movimentos baseados em valores aleatórios (random.r
 Textos: Exibição de mensagens e rankings com pygame.font.
 Lógica do Jogo: Determinação do vencedor e transição de pista controlada por posições e condições.
 O jogo combina gráficos, som e lógica simples para criar uma experiência interativa.
+
+ALUNOS: Kauãn de Almeida Gomes RA 1137262 
+        Gilmar Colussi Biolchi Filho RA1137267
